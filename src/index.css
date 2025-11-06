@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+.leafImage {
+    background-image: url("./assets/leafs.png");
+    background-size: cover;
+}
