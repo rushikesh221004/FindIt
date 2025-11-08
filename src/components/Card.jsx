@@ -1,11 +1,14 @@
 import { LuUser } from "react-icons/lu";
-import { FiPhone } from "react-icons/fi";
-import { MdMailOutline } from "react-icons/md";
-import { FiBriefcase } from "react-icons/fi";
-import { SlLocationPin } from "react-icons/sl";
 import users from "./user.js";
+import { useNavigate } from "react-router-dom";
 
 export default function Card() {
+  const navigate = useNavigate();
+
+  const handleViewProfile = (user) => {
+    navigate("/profile", {state: {user}})
+  }
+
   return (
     <div className="min-h-screen w-full flex mt-10 justify-center py-4 px-3">
       <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:grid-rows-4 lg:max-w-[1000px] xl:grid-cols-3 xl:grid-rows-3 xl:max-w-[1300px] 2xl:max-w-[1400px] 2xl:gap-20 mx-auto grid-rows-8">
@@ -62,7 +65,7 @@ export default function Card() {
 
                 {/* Action Buttons */}
                 <div className="flex gap-3 mt-6">
-                  <button className="flex-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 rounded-xl hover:shadow-lg transition-all transform hover:-translate-y-0.5">
+                  <button onClick={() => handleViewProfile(data)} className="flex-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 rounded-xl hover:shadow-lg transition-all transform hover:-translate-y-0.5">
                     View Profile
                   </button>
                   <button className="px-6 bg-gray-100 text-gray-700 font-semibold py-3 rounded-xl hover:bg-gray-200 transition-colors">
