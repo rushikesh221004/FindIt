@@ -20,21 +20,21 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div className="w-full py-4 px-14 flex items-center justify-between">
+    <div className="w-full py-4 px-2 md:px-14 flex items-center justify-between">
       <img src={logo} alt="fint it" className="h-10" />
-      <div className="flex items-center gap-6">
-        <div className="relative w-fit h-fit">
+      <div className="flex items-center justify-center md:gap-6 gap-2">
+        <div className="relative w-fit mt-2 h-fit">
           <input
             placeholder="Search peoples..."
-            className="focus:outline-none text-xl px-6 py-4 rounded-full bg-gray-100 font-semibold"
+            className="focus:outline-none text-sm md:text-xl py-2 px-4 lg:px-6 lg:py-3 rounded-full bg-gray-100 font-semibold"
           />
-          <CgSearch className="absolute right-6 hover:cursor-pointer top-1/2 -translate-y-1/2 text-3xl text-gray-500" />
+          <CgSearch className="absolute right-6 hover:cursor-pointer top-1/2 -translate-y-1/2 text-[20px] md:text-3xl text-gray-500" />
         </div>
-        <div ref={dropdownRef} className="relative inline-block">
+        <div ref={dropdownRef} className="relative mt-2 inline-block">
           {/* Profile Button */}
           <div
             onClick={() => setOpen((prev) => !prev)}
-            className="h-[50px] w-[50px] hover:cursor-pointer overflow-hidden rounded-full"
+            className="md:h-[50px] md:w-[50px] h-[30px] w-[30px] hover:cursor-pointer overflow-hidden rounded-full"
           >
             <img
               src="https://media.licdn.com/dms/image/v2/D5603AQGWFa7AzWpSug/profile-displayphoto-scale_200_200/B56ZlMe2_gJ8AY-/0/1757924784223?e=1764201600&v=beta&t=yyo1Z9CONFb4nyTBV9wdGqgyvEoZ9TaYaJgMV2TcG4A"

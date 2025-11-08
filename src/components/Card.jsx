@@ -7,10 +7,10 @@ import users from "./user.js";
 
 export default function Card() {
   return (
-    <div className="min-h-screen flex justify-center py-4 px-3 w-full">
-      <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:grid-rows-5 lg:max-w-[1000px] xl:grid-cols-3 xl:grid-rows-3 xl:max-w-[1300px] 2xl:max-w-[1400px] 2xl:gap-20 mx-auto grid-rows-8">
+    <div className="min-h-screen w-full flex mt-10 justify-center py-4 px-3">
+      <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:grid-rows-4 lg:max-w-[1000px] xl:grid-cols-3 xl:grid-rows-3 xl:max-w-[1300px] 2xl:max-w-[1400px] 2xl:gap-20 mx-auto grid-rows-8">
         {users.map((data, index) => (
-          <div key={index} className="w-full max-w-md">
+          <div key={index} className="max-w-md">
             {/* Card Container */}
             <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
               {/* Header Background */}
